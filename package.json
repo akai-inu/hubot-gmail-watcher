@@ -1,0 +1,30 @@
+{
+  "name": "hubot-gmail-watcher",
+  "version": "1.0.0",
+  "description": "Watches your new mail to gmail and send by hubot",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/akai-inu/hubot-gmail-watcher.git"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "gmail"
+  ],
+  "author": "akai-inu <akai_inu@live.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akai-inu/hubot-gmail-watcher/issues"
+  },
+  "homepage": "https://github.com/akai-inu/hubot-gmail-watcher#readme",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "iconv": "^2.1.11",
+    "inbox": "^1.1.59",
+    "mailparser": "^0.5.3"
+  }
+}
