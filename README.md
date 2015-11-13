@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/hubot-gmail-watcher.svg)](https://badge.fury.io/js/hubot-gmail-watcher)
+
 Hubot gmail watcher
 =======================
 
