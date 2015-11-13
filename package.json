@@ -1,6 +1,6 @@
 {
   "name": "hubot-gmail-watcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Watches your new mail to gmail and send by hubot",
   "main": "index.coffee",
   "scripts": {
