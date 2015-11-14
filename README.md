@@ -10,7 +10,6 @@ Install
 
 1. `$ npm install --save hubot-gmail-watcher`
 1. add `hubot-gmail-watcher` to `external-scripts.json`
-1. add environment variables below to `.env`
 1. send `gmail start` to your hubot
 
 Environment variables

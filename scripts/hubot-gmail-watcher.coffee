@@ -2,7 +2,6 @@
 #   Notify new mail on Gmail with XOAuth2 connection in realtime
 #
 # Dependencies:
-#   "coffee-script": "^1.10.0"
 #   "inbox": "^1.1.59"
 #   "iconv": "^2.1.11"
 #   "mailparser": "^0.5.3"
