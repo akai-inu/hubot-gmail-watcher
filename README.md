@@ -21,19 +21,6 @@ Environment variables
 - GMAIL_REFRESH_TOKEN - gmail api refresh token
 - GMAIL_ACCESS_TOKEN  - gmail api access token
 
-TODO
------------------------
-
-- Environment variables faq
-- Get refresh/access tokens automatically
-- Add label support
-    - label color
-- Adapter support
-    - ChatWork
-    - HipChat
-    - IRC
-    - SkypeWeb
-
 Contribution
 -----------------------
 
