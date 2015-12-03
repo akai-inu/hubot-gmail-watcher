@@ -108,6 +108,7 @@ module.exports = (robot) ->
     return (mail) ->
       switch res.robot.adapterName
         when 'slack' then sendMailToSlack res, mail
+        when 'chatwork' then sendMailToChatWork res, mail
         else sendMailWithPlainText res, mail
 
   ###
@@ -151,14 +152,39 @@ module.exports = (robot) ->
     res.robot.emit 'slack-attachment', data
 
   ###
+  # Send mail data to chatwork
+  #
+  # @param res  hubot response
+  # @param mail parsed mail object
+  # @see http://developer.chatwork.com/ja/endpoint_rooms.html#POST-rooms-room_id-messages
+  # @see http://developer.chatwork.com/ja/messagenotation.html
+  ###
+  sendMailToChatWork = (res, mail) ->
+    mailSender = mail.from.pop()
+    str = [
+      "[info]"
+      "[title]"
+      "#{mail.subject} from: #{mailSender.name} <#{mailSender.address}>"
+      " "
+      mail.date.toLocalString()
+      "[/title]"
+      "[code]"
+      mail.text
+      "[/code]"
+      "[/info]"
+    ].join ''
+    res.send str
+
+  ###
   # Send mail data with plain text
   #
   # @param res  hubot response
   # @param mail parsed mail object
   ###
   sendMailWithPlainText = (res, mail) ->
+    mailSender = mail.from.pop()
     str = [
-      "#{mail.subject} from: #{mail.from[0].name} <#{mail.from[0].address}>"
+      "#{mail.subject} from: #{mailSender.name} <#{mailSender.address}>"
       ""
       "#{mail.text}"
     ].join '\n'
