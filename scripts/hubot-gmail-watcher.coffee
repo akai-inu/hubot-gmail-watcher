@@ -107,7 +107,7 @@ module.exports = (robot) ->
   sendMail = (res) ->
     return (mail) ->
       switch res.robot.adapterName
-        when 'slack' then sendMailWithAttachments res, mail
+        when 'slack' then sendMailToSlack res, mail
         else sendMailWithPlainText res, mail
 
   ###
@@ -118,7 +118,7 @@ module.exports = (robot) ->
   # @see https://api.slack.com/docs/attachments
   # @see https://github.com/slackhq/hubot-slack/blob/master/src/slack.coffee#L274
   ###
-  sendMailWithAttachments = (res, mail) ->
+  sendMailToSlack = (res, mail) ->
     mailSender = mail.from.pop()
     color = if mail.priority is 'high' then 'danger' else 'good'
     data =
